@@ -1,0 +1,244 @@
+/* custom colors */
+:root {
+  --secondary-bg: #14151F !important;                /* tab bg */
+  --primary-bg: #1D1E2A !important;     /* nav bar and selected tab */
+  --browser-bg: #1A1B26 !important;     /* url bg & hover bg */
+  --main-text: #777777 !important;      /* tab fg */
+  --secondary-text: #556B82 !important;        /* selected tab fg*/
+  --third-text: #74857C !important;       /* hover tab fg & url bar fg*/
+}
+
+browser, #browser-panel, page, tabbrowser {
+  background-color: var(--secondary-bg) !important;
+}
+panel { background-color: transparent !important; }
+tabs { background-color: var(--secondary-bg) !important; }
+
+#urlbar {
+  border-style: none !important;
+  background-color: var(--secondary-bg) !important;
+  color: var(--third-text) !important;
+}
+
+#navigator-toolbox::after {
+  content: none !important;
+}
+
+.search-panel-header {
+  background-color: var(--secondary-bg) !important;
+}
+
+separator, toolbarseparator, .panel-subviews,
+vbox, hbox, deck, description, button, [role=button] {
+  border-color: var(--secondary-bg) !important;
+  border-image: none !important;
+}
+
+.panel-ui-grid {
+  align: center !important;
+}
+
+toolbar button,
+panel, .button-box {
+  outline: none !important;
+}
+
+#urlbar-go-button, #urlbar-reload-button {
+  display: none;
+}
+
+/* page identity box */
+#identity-box {
+  margin-left: 10px !important;
+  background-color: var(--secondary-bg) !important;
+}
+
+.tab-icon-image {
+  opacity: 0.9 !important;
+  transition: none !important;
+}
+
+/* changes bg color of pinned tabs when updated */
+tab[pinned][titlechanged]:not([selected="true"]) > .tab-stack > .tab-content {
+  opacity: 0.6 !important;
+  background: var(--secondary-text) !important;
+}
+
+/* center tab text */
+.tab-text { text-align: center; }
+
+toolbarbutton:disabled {
+  opacity: 0.4 !important;
+}
+
+/* speaker  icon */
+.tab-icon-sound, .tab-icon-overlay {
+  list-style-image: url('https://puu.sh/r0Ect/f22929bb47.png') !important;
+  opacity: 0.7 !important;
+}
+.tab-icon-sound[muted="true"] {
+  list-style-image: url('https://puu.sh/r0Eey/a5981717de.png') !important;
+  opacity: 0.7 !important;
+}
+
+.toolbarbutton-menubutton-dropmarker {
+  display: none !important;
+}
+
+/* about ffox dialog */
+#aboutDialogContainer, #clientBox, .main-content {
+  background: var(--secondary-bg) !important;
+  color: var(--secondary-text) !important;
+}
+#noUpdatesFound > label, #trademark, #verifiedManage, #fxaUnlinkButton, #fxaChangeDeviceName, #fxaSyncComputerName, .androidAttribution {
+  color: var(--main-text) !important;
+}
+#leftBox {
+  background-image: url("https://puu.sh/lkSrb/131664655c.png") !important;
+}
+#rightBox {
+  background-image: url("https://puu.sh/lkSoQ/809ae3607f.png") !important;
+}
+
+#notification-popup-box {
+  display: none !important;
+}
+
+#placesList > treechildren, #searchFilter, #textbox {
+  background: var(--secondary-bg) !important;
+  color: var(--main-text) !important;
+}
+
+.download.download-state, #clearDownloadsButton {
+  background: var(--primary-bg) !important;
+  color: var(--third-text) !important;
+}
+#placesToolbar, #placesView > splitter, #searchFilter, .checkbox-check, .fxaAccountBox, #verifiedManage, #fxaUnlinkButton, #fxaChangeDeviceName, #fxaSyncComputerName, .header, spacer.separator, #tabsElement, #handlersView > listheader, #engineList > treecols, #textbox, #configTree {
+  border: none !important;
+}
+.checkbox-check {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.customization-target,
+panelview, panelitem,  panel hbox,
+notification, notificationbox, popupnotification,
+.panel-arrowcontent {
+  background-color: var(--browser-bg) !important;
+  border: none !important;
+  font-size: 13px !important;
+}
+
+#nav-bar .customization-target,
+toolbox, toolbar, toolbaritem, toolbarbutton, button, box[role=button],
+richlistitem, statuspanel,
+menu,
+tab {
+  background-color: var(--primary-bg) !important;
+  color: var(--main-text) !important;
+  font-family: "Fira Sans" !important;
+  font-size: 13px !important;
+}
+
+button, box[role=button],
+toolbar, toolbaritem, toolbox,
+statuspanel,
+.tabs-newtab-button {
+  border-style: none !important;
+  border-image: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+toolbarbutton {
+  background-color: transparent !important;
+  border-style: none !important;
+}
+
+.toolbarbutton-badge-stack,
+.toolbarbutton-icon {
+  filter: brightness(65%) grayscale(25%);
+  background-image: none !important;
+  background-color: transparent !important;
+  
+  transition: none !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-badge-stack,
+.urlbar-icon,
+.tabs-newtab-button {
+  filter: opacity(0.25);
+}
+
+button:hover, [role=button]:hover,
+toolbarbutton:hover,
+toolbarbutton[open],
+.urlbar-icon:hover {
+  background-color: var(--secondary-bg) !important;
+  color: var(--secondary-text) !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.ac-url-text, .url-text {
+  color: var(--secondary-text) !important;
+}
+
+.ac-separator-text, .separator-text {
+  color: var(--third-text) !important;
+}
+
+tab {
+  background: var(--secondary-bg) !important;
+  color: var(--main-text) !important;
+  padding: 0px !important;;
+  min-width: 64px;
+  border-style: none;
+  border-radius: 0px;
+
+  transition: background-color 0.125s;
+}
+
+tab::before {
+  opacity: 0.25 !important;
+}
+
+tab[selected] {
+  background-color: var(--primary-bg) !important;
+  color: var(--secondary-text) !important;
+}
+
+/* remove seperators between pinned tabs */
+tab[pinned]:after,
+tab[pinned]:before {
+  display: none !important;
+}
+
+tab[pinned] {
+  min-width: initial !important;
+}
+
+.tab-background { visibility: hidden !important; }
+.tab-content { pointer-events: all; }
+
+/* new tab */
+.tabs-newtab-button {
+  background-image: none !important;
+  width: 30px !important;
+}
+
+tab:not([selected]):hover, .tabs-newtab-button:hover {
+  background-color: var(--browser-bg) !important;
+}
+
+tab:not([selected]) .tab-close-button {  display: none; }
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+    padding-inline-end: 0 !important;
+    padding-inline-start: 0 !important;
+}
+
+toolbox, menubar {
+  background-color: var(--secondary-bg) !important;
+}
